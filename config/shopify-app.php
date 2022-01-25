@@ -342,14 +342,14 @@ return [
     */
 
     'scripttags' => [
-        /*
+        
             [
-                'src' => env('SHOPIFY_SCRIPTTAG_1_SRC', 'https://some-app.com/some-controller/js-method-response'),
+                'src' => env('SHOPIFY_SCRIPTTAG_1_SRC', ' https://f398-122-173-142-130.ngrok.io/js/script.js'),
                 'event' => env('SHOPIFY_SCRIPTTAG_1_EVENT', 'onload'),
                 'display_scope' => env('SHOPIFY_SCRIPTTAG_1_DISPLAY_SCOPE', 'online_store')
             ],
-            ...
-        */
+            
+        
     ],
 
     /*
