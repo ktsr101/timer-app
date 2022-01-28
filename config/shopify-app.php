@@ -320,16 +320,19 @@ return [
     */
 
     'webhooks' => [
-        /*
+        
             [
                 'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'ORDERS_CREATE'),
                 'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://some-app.com/webhook/orders-create')
             ], [
                 'topic' => env('SHOPIFY_WEBHOOK_2_TOPIC', 'APP_PURCHASES_ONE_TIME_UPDATE'),
                 'address' => env('SHOPIFY_WEBHOOK_2_ADDRESS', 'https://some-app.com/webhook/purchase'),
+            ],[
+                'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'APP_UNINSTALLED'),
+                'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://timerapp.test/webhook/app-uninstalled')
             ]
-            ...
-        */
+            
+        
     ],
 
     /*
@@ -344,7 +347,7 @@ return [
     'scripttags' => [
         
             [
-                'src' => env('SHOPIFY_SCRIPTTAG_1_SRC', ' https://f398-122-173-142-130.ngrok.io/js/script.js'),
+                'src' => env('SHOPIFY_SCRIPTTAG_1_SRC', config('app.url') .'/js/script.js'),
                 'event' => env('SHOPIFY_SCRIPTTAG_1_EVENT', 'onload'),
                 'display_scope' => env('SHOPIFY_SCRIPTTAG_1_DISPLAY_SCOPE', 'online_store')
             ],
@@ -364,12 +367,12 @@ return [
     */
 
     'after_authenticate_job' => [
-        /*
+        
             [
-                'job' => env('AFTER_AUTHENTICATE_JOB'), // example: \App\Jobs\AfterAuthorizeJob::class
+                'job' => env('AFTER_AUTHENTICATE_JOB', \App\Jobs\AfterAuthenticateJob::class), // example: \App\Jobs\AfterAuthorizeJob::class
                 'inline' => env('AFTER_AUTHENTICATE_JOB_INLINE', false) // False = dispatch job for later, true = dispatch immediately
             ],
-        */
+    
     ],
 
     /*
