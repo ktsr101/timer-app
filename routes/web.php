@@ -25,7 +25,8 @@ Route::middleware(['verify.shopify'])->group(function () {
     route::view('/customization','customization');
     route::get('test',function(){
         $shop = Auth::user();
-        $shopApi = $shop->api()->rest('GET', '/admin/shop.json')['body']['shop'];
-        return json_encode($shopApi);
+        $themes = $shop->api()->rest('GET', '/admin/themes.json');
+        
+        return json_encode($themes);
     });
 });
