@@ -46,5 +46,7 @@
         @endif
 
         @yield('scripts')
+        <script src="{{asset('js/app.js')}}"></script>
+        <script src="../path/to/flowbite/dist/flowbite.js"></script>
     </body>
 </html>

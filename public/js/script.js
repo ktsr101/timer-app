@@ -1,6 +1,20 @@
+fetch('https://timerapp.test/getShopSettings',{
+    headers: {
+         
+    }
+})
+
+  .then(response => {
+  console.log(response);
+  })
+  
+  .catch(error => console.log(error));
+
 (function() {
 
    function init() {
+    
+    console.log("init");
      
     var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
 
@@ -619,7 +633,7 @@ $('#container').flipclock();
    function runTimer() {
        setInterval(function() {
             
-       }, 1000);
+       }, 100);
    }
 
    init();

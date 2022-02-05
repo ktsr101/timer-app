@@ -2062,6 +2062,8 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./timer-app */ "./resources/js/timer-app.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -2092,6 +2094,21 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/timer-app.js":
+/*!***********************************!*\
+  !*** ./resources/js/timer-app.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+var appDomain = "https://timerapp.test";
+var wishlistButton = document.querySelector('.');
+axios.get('timerapp.text/getShopSettings').then(function (response) {
+  console.log(response);
+});
 
 /***/ }),
 

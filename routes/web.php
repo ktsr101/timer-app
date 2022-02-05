@@ -1,32 +1,41 @@
 <?php
 
-
+use App\Models\timer;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
+USE App\Http\Controllers\TimerController;
+USE App\Http\Controllers\SettingsController;
 
 
 Route::middleware(['verify.shopify'])->group(function () {
-    Route::get('/', function () {return view('dashboard');})->name('home');
+    Route::get('/', function () {
+        $shop = auth::user();
+        $settings = timer::where("shop_domain", $shop->name)->first();
+
+        return view('dashboard', compact('settings'));
+
+        
+    
+    })->name('home');
     route::view('/banners','banners');
     route::view('/timer','timer');
     route::view('/customization','customization');
-    route::get('test',function(){
-        $shop = Auth::user();
-        $themes = $shop->api()->rest('GET', '/admin/themes.json');
-        
-        return json_encode($themes);
+    route::view('/test','table');
+    
+    
+    Route::controller(TimerController::class)->group(function () {
+        Route::post('/date_timeShow', 'date_timeShow');
     });
+    
+    
+    Route::controller(SettingsController::class)->group(function () {
+        Route::post('/insertData', 'insert');
+    });
+    //Route::controller(SettingsController::class)->group(function () {
+        //Route::post('/insert.php', 'insert');
+    //});
+    Route::controller(SettingsController::class)->group(function () {
+    Route::get('/getShopSettings', 'outPut');
+    });
+   
 });
