@@ -2295,9 +2295,6 @@ var __webpack_exports__ = {};
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 var appDomain = "https://timerapp.test";
 var wishlistButton = document.querySelector('.');
-axios.get('timerapp.text/getShopSettings').then(function (response) {
-  console.log(response);
-});
 })();
 
 /******/ })()

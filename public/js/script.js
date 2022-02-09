@@ -1,25 +1,33 @@
-fetch('https://timerapp.test/getShopSettings',{
-    headers: {
-         
-    }
-})
+let shopLink = window.location.href;
+mainShopLink1 = shopLink.slice(8,37);
+mainShopLink2 = mainShopLink1.split("?")[0];
+link1 = 'https://timerapp.test/getShopSettings?shopname=';
+let link2 = link1.concat(mainShopLink2);
+console.log(link2);
 
-  .then(response => {
-  console.log(response);
-  })
+var time1 = null;
+var text1 = null;
+var button1 = null;
+var buttonLnk = null;
   
-  .catch(error => console.log(error));
 
 (function() {
 
    function init() {
-    
-    console.log("init");
-     
-    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+    fetch(link2)
+
+    .then(response => {
+      response.json().then(body => {
+            console.log(body[0]['text']);
+            time1 = body[0]['time'];
+            text1 = body[0]['text'];
+            button1 = body[0]['button_text']; 
+            buttonLnk = body[0]['button_link'];
+            console.log(window.location.href);
+            var countDownDate = new Date(time1).getTime();
 
         
-    var x = setInterval(function() {
+    var x = setInterval(function() {    ``
 
    
     var now = new Date().getTime();
@@ -611,9 +619,9 @@ $('#container').flipclock();
         </style>
         </head>
         <body>
-        <p>Offer ends in</p>
+        <p>${text1}</p>
         <p id="demo"></p>
-        <button class="button-32" role="button">Take Me There</button>
+        <a href="${buttonLnk}" class="button-32" role="button">${button1}</a>
         
         
 
@@ -628,6 +636,15 @@ $('#container').flipclock();
       </html>
         </div>`)
         runTimer();
+        });
+  
+    })
+  
+    .catch(error => console.log(error));
+    
+    
+     
+    
    }
 
    function runTimer() {

@@ -12,13 +12,13 @@ use Illuminate\Support\Facades\Auth;
 class SettingsController extends Controller
 {
    
-    public function outPut() {
-        $shop = Auth::user();
+    public function outPut(Request $request) {
+        $shop = $request->shopname;
         
-        $user = DB::table('settings')->where('shop_domain', $shop)->first();
+        $content = DB::table('settings')->where('shop_domain', $shop)->first();
         
         return response()->json([
-            $user
+            $content
         ]);
      }
 
