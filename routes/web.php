@@ -36,7 +36,6 @@ Route::middleware(['verify.shopify'])->group(function () {
     //});
     
 });
-Route::controller(SettingsController::class)->group(function () {
-    Route::get('/getShopSettings', 'outPut')->middleware('cors');
-    });
- 
+    Route::controller(SettingsController::class)->group(function () {
+        Route::get('/getShopSettings', 'outPut')->middleware('cors');
+        });

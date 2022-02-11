@@ -1,8 +1,7 @@
-let shopLink = window.location.href;
-mainShopLink1 = shopLink.slice(8,37);
-mainShopLink2 = mainShopLink1.split("?")[0];
+let shop1 = window.Shopify.shop;
+console.log(shop1);
 link1 = 'https://timerapp.test/getShopSettings?shopname=';
-let link2 = link1.concat(mainShopLink2);
+let link2 = link1.concat(shop1);
 console.log(link2);
 
 var time1 = null;
@@ -305,6 +304,7 @@ $('#container').flipclock();
           font-size: 20px;
         }
         .button-32 {
+          text-decoration: none;
           background-color: #fff000;
           border-radius: 12px;
           color: #000;
