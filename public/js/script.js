@@ -3,7 +3,6 @@ console.log(shop1);
 link1 = 'https://timerapp.online/getShopSettings?shopname=';
 let link2 = link1.concat(shop1);
 console.log(link2);
-console.log(linkn1);
 
 var time1 = null;
 var text1 = null;
