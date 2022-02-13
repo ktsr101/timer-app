@@ -5,7 +5,7 @@
 
 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
     <!-- This is an example component -->
- <div id="wrapper" class="container px-4 py-4 mx-auto">
+ <div id="wrapper" class=" flexing container px-4 py-4 mx-auto">
 
  
 
@@ -19,6 +19,9 @@
      </div> -->
 
     <style>
+        .flexing{
+            display: flex;
+        }
         .container .card{
     position: relative;
     cursor: pointer;
