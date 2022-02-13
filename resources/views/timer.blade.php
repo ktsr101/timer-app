@@ -141,7 +141,7 @@
                     
   }</style>
   <button 
-        type="submit" value="Submit" class="btnSave">
+        type="submit" value="Submit" class="btnSave mx-auto col-span-6 sm:col-span-6 mt-5 block">
         
         <p>
             Save
