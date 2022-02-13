@@ -122,9 +122,27 @@
       />
   </div>
   
-  
+  <style>
+  .btnSave{
+    display: inline-block;
+                    outline: 0;
+                    cursor: pointer;
+                    text-align: center;
+                    border: 0;
+                    padding: 7px 16px;
+                    min-height: 36px;
+                    min-width: 36px;
+                    color: #ffffff;
+                    background: #008060;
+                    border-radius: 4px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0px 0px inset;
+                    
+  }</style>
   <button 
-        type="submit" value="Submit" class=" mx-auto col-span-6 sm:col-span-6 mt-5 block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 px-2 flex align-middle relative w-fit h-fit px-4 py-1 text-lg border rounded-full bg-blue ">
+        type="submit" value="Submit" class="btnSave">
+        
         <p>
             Save
         </p>
