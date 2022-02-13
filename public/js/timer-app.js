@@ -2293,7 +2293,7 @@ var __webpack_exports__ = {};
   !*** ./resources/js/timer-app.js ***!
   \***********************************/
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-var appDomain = "https://timerapp.test";
+var appDomain = "https://timerapp.online";
 var wishlistButton = document.querySelector('.');
 })();
 

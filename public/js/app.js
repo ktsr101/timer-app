@@ -2104,7 +2104,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-var appDomain = "https://timerapp.test";
+var appDomain = "https://timerapp.online";
 var wishlistButton = document.querySelector('.');
 
 /***/ }),

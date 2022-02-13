@@ -13,6 +13,6 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         '*', 
-        'https://timerapp.test/getShopSettings',
+        'https://timerapp.online/getShopSettings',
     ];
 }
