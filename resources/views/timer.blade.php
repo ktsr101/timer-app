@@ -124,7 +124,7 @@
   
   <style>
   .btnSave{
-    display: inline-block;
+    
                     outline: 0;
                     cursor: pointer;
                     text-align: center;
