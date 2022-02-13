@@ -3,9 +3,9 @@
 
 @section('content')
 
-<div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+<!-- <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
     <!-- This is an example component -->
- <div id="wrapper" class=" flexing container px-4 py-4 mx-auto">
+ <!-- <div id="wrapper" class=" flexing container px-4 py-4 mx-auto"> -->
 
  
 
@@ -19,9 +19,16 @@
      </div> -->
 
     <style>
-        .flexing{
-            display: flex;
-        }
+        body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: consolas;
+}
         .container .card{
     position: relative;
     cursor: pointer;
@@ -104,7 +111,9 @@
     background: #333;
     color: #fff;
 }
+
     </style>
+    <body>
 
      <div class="container">
         <div class="card">
@@ -150,8 +159,8 @@
             </div>
         </div>
     </div>
-
-</div>
+</body>
+<!-- </div> -->
 
 @endsection
 
