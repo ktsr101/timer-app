@@ -52,11 +52,7 @@
 
         <a href="/timer" class="@if(Request::path() == 'timer') bg-gray-900 @endif text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Timer</a>
 
-        <!-- <a href="/banners" class="@if(Request::path() == 'banners') bg-gray-900 @endif text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Banners</a> -->
-
-        <!-- <a href="/customization" class="@if(Request::path() == 'customization') bg-gray-900 @endif text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Customization</a> -->
-
-        <!-- <a href="/test" class="@if(Request::path() == 'test') bg-gray-900 @endif text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">test</a> -->
+        
       </div>
     </div>
   </nav>
