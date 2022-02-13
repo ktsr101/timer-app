@@ -3,9 +3,9 @@
 
 @section('content')
 
-<!-- <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+<div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
     <!-- This is an example component -->
- <!-- <div id="wrapper" class=" flexing container px-4 py-4 mx-auto"> -->
+ <div id="wrapper" class=" flexing container px-4 py-4 mx-auto">
 
  
 
@@ -19,28 +19,24 @@
      </div> -->
 
     <style>
-        body{
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background: #333;
+        .container-card{
+    width: 1000px;
+    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: consolas;
+    justify-content: space-between;
 }
         .container .card{
     position: relative;
     cursor: pointer;
 }
 
-.container .card .face{
+.container-card .card .face{
     width: 300px;
     height: 200px;
     transition: 0.5s;
 }
 
-.container .card .face.face1{
+.container-card .card .face.face1{
     position: relative;
     background: #333;
     display: flex;
@@ -50,25 +46,25 @@
     transform: translateY(100px);
 }
 
-.container .card:hover .face.face1{
+.container-card .card:hover .face.face1{
     background: #ff0057;
     transform: translateY(0);
 }
 
-.container .card .face.face1 .content{
+.container-card .card .face.face1 .content{
     opacity: 0.2;
     transition: 0.5s;
 }
 
-.container .card:hover .face.face1 .content{
+.container-card .card:hover .face.face1 .content{
     opacity: 1;
 }
 
-.container .card .face.face1 .content img{
+.container-card .card .face.face1 .content img{
     max-width: 100px;
 }
 
-.container .card .face.face1 .content h3{
+.container-card .card .face.face1 .content h3{
     margin: 10px 0 0;
     padding: 0;
     color: #fff;
@@ -76,7 +72,7 @@
     font-size: 1.5em;
 }
 
-.container .card .face.face2{
+.container-card .card .face.face2{
     position: relative;
     background: #fff;
     display: flex;
@@ -88,16 +84,16 @@
     transform: translateY(-100px);
 }
 
-.container .card:hover .face.face2{
+.container-card .card:hover .face.face2{
     transform: translateY(0);
 }
 
-.container .card .face.face2 .content p{
+.container-card .card .face.face2 .content p{
     margin: 0;
     padding: 0;
 }
 
-.container .card .face.face2 .content a{
+.container-card .card .face.face2 .content a{
     margin: 15px 0 0;
     display:  inline-block;
     text-decoration: none;
@@ -107,15 +103,14 @@
     border: 1px solid #333;
 }
 
-.container .card .face.face2 .content a:hover{
+.container-card .card .face.face2 .content a:hover{
     background: #333;
     color: #fff;
 }
-
     </style>
-    <body>
 
-     <div class="container">
+    
+     <div class="container-card">
         <div class="card">
             <div class="face face1">
                 <div class="content">
@@ -159,8 +154,8 @@
             </div>
         </div>
     </div>
-</body>
-<!-- </div> -->
+
+</div>
 
 @endsection
 
