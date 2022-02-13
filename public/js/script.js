@@ -1,6 +1,6 @@
 let shop1 = window.Shopify.shop;
 console.log(shop1);
-link1 = 'https://timerapp.test/getShopSettings?shopname=';
+link1 = 'https://timerapp.online/getShopSettings?shopname=';
 let link2 = link1.concat(shop1);
 console.log(link2);
 

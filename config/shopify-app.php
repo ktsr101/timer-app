@@ -154,7 +154,7 @@ return [
     |
     */
 
-    'api_key' => env('SHOPIFY_API_KEY', 'fac35db02922f76f1b1a09b4200fa8f6'),
+    'api_key' => env('SHOPIFY_API_KEY', ''),
 
     /*
     |--------------------------------------------------------------------------
@@ -165,7 +165,7 @@ return [
     |
     */
 
-    'api_secret' => env('SHOPIFY_API_SECRET', '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'),
+    'api_secret' => env('SHOPIFY_API_SECRET', ''),
 
     /*
     |--------------------------------------------------------------------------
@@ -322,14 +322,8 @@ return [
     'webhooks' => [
         
             [
-                'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'ORDERS_CREATE'),
-                'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://some-app.com/webhook/orders-create')
-            ], [
-                'topic' => env('SHOPIFY_WEBHOOK_2_TOPIC', 'APP_PURCHASES_ONE_TIME_UPDATE'),
-                'address' => env('SHOPIFY_WEBHOOK_2_ADDRESS', 'https://some-app.com/webhook/purchase'),
-            ],[
                 'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'APP_UNINSTALLED'),
-                'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://timerapp.test/webhook/app-uninstalled')
+                'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', config('app.url') . '/webhook/app-uninstalled')
             ]
             
         
