@@ -142,7 +142,7 @@
 }
 .switch {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 60px;
   height: 34px;
 }
