@@ -209,7 +209,7 @@ input:checked + .slider:before {
 </button>
 
 <label class="switch mx-auto col-span-6 sm:col-span-6 mt-5 block">
-  <input id='enabledbtn' type="checkbox" checked>
+  <input onclick="toggle()" id='enabledbtn' type="checkbox" checked="false">
   <span class="slider round"></span>
 </label>
 
@@ -239,6 +239,20 @@ input:checked + .slider:before {
       
         actions.TitleBar.create(app, { title: 'Timer' });
        
+        let enabled_bool = true;
+        let testBool = document.getElementById('enabledbtn').checked;
+        
+      
+        function toggle() {
+
+
+
+            testBool = false ? document.getElementById('enabledbtn').setAttribute("checked", "true") : document.getElementById('enabledbtn').setAttribute("checked", "false");
+              
+            
+        }
+
+
         function onBoard(){
           axios({
         method: 'post',
@@ -249,7 +263,7 @@ input:checked + .slider:before {
           bannerText:document.getElementById('text_banner').value,
           buttonText:document.getElementById('text_button').value,
           buttonLink:document.getElementById('button_link').value,
-          enabledBnr:document.getElementById('enabledbtn').value
+          enabledBnr:enabled_bool
         }
       })
          .then(function(response){
