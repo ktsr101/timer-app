@@ -208,7 +208,7 @@ input:checked + .slider:before {
         </p>
 </button>
 
-<label class="switch">
+<label class="switch mx-auto col-span-6 sm:col-span-6 mt-5 block">
   <input id='enabledbtn' type="checkbox" checked>
   <span class="slider round"></span>
 </label>
