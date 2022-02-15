@@ -15,7 +15,8 @@ class settings extends Model
         'text',
         'time',
         'button_text',
-        'button_link'
+        'button_link',
+        'enabled'
        
     ];
 }

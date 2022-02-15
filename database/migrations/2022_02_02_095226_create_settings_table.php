@@ -20,6 +20,7 @@ class CreateSettingsTable extends Migration
             $table->timestamp('time');
             $table->string('button_text');
             $table->string('button_link');
+            $table->boolean('enabled');
             $table->timestamps();
         });
     }
