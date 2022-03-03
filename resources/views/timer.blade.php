@@ -254,7 +254,7 @@ input:checked + .slider:before {
           bannerText:document.getElementById('text_banner').value,
           buttonText:document.getElementById('text_button').value,
           buttonLink:document.getElementById('button_link').value,
-          enabledBnr:enabled_bool
+          // enabledBnr:enabled_bool
         }
       })
          .then(function(response){
