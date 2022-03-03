@@ -14,5 +14,5 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         '*', 
         'https://timerapp.online/getShopSettings',
-    ];
+        'https://timerapp.online/insertData'    ];
 }
