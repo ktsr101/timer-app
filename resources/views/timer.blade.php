@@ -200,13 +200,13 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 </style>
-  <button 
+  <input 
         type="submit" value="Submit" class="btnSave mx-auto col-span-6 sm:col-span-6 mt-5 block">
         
         <p>
             Save
         </p>
-</button>
+
 <!-- <label class="switch mx-auto col-span-6 sm:col-span-6 mt-5 block">
   <input onclick="toggle()" id='enabledbtn' type="checkbox" >
   <span class="slider round"></span>
