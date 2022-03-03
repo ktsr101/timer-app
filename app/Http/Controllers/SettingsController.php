@@ -30,8 +30,7 @@ class SettingsController extends Controller
             ['time' => date("Y-m-d H:i:s", strtotime( $bodyContent->EndDatetime)),
             'text' => $bodyContent->bannerText,
             'button_text' => $bodyContent->buttonText,
-            'button_link' => $bodyContent->buttonLink,
-            'enabled'=> $bodyContent->enabledBnr]
+            'button_link' => $bodyContent->buttonLink,]
        );
      }
     /**
