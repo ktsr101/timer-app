@@ -207,12 +207,13 @@ input:checked + .slider:before {
             Save
         </p>
 </button>
-</div>
-</form>
 <!-- <label class="switch mx-auto col-span-6 sm:col-span-6 mt-5 block">
-  <input onclick="toggle()" id='enabledbtn' type="checkbox" checked="false">
+  <input onclick="toggle()" id='enabledbtn' type="checkbox" >
   <span class="slider round"></span>
 </label> -->
+</div>
+</form>
+
 
 
 
@@ -239,7 +240,7 @@ input:checked + .slider:before {
         function toggle() {
 
 
-            testBool = false ? document.getElementById('enabledbtn').setAttribute("checked", "true") : document.getElementById('enabledbtn').setAttribute("checked", "false");
+            testBool = true ? enabled_bool = false : enabled_bool = true ;
               
             
         }
