@@ -201,11 +201,9 @@ input:checked + .slider:before {
 }
 </style>
   <input 
-        type="submit" value="Submit" class="btnSave mx-auto col-span-6 sm:col-span-6 mt-5 block">
+        type="submit" value="Save" class="btnSave mx-auto col-span-6 sm:col-span-6 mt-5 block">
         
-        <p>
-            Save
-        </p>
+        
 
 <!-- <label class="switch mx-auto col-span-6 sm:col-span-6 mt-5 block">
   <input onclick="toggle()" id='enabledbtn' type="checkbox" >
