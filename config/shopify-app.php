@@ -324,6 +324,18 @@ return [
             [
                 'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'APP_UNINSTALLED'),
                 'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', config('app.url') . '/webhook/app-uninstalled')
+            ],
+            [
+                'topic' => 'SHOP_REDACT',
+                'address' => 'https://timerapp.online/webhook/shop-redact'
+            ],
+            [
+                'topic' => 'CUSTOMERS_REDACT',
+                'address' => 'https://timerapp.online/webhook/customers-redact'
+            ],
+            [
+                'topic' => 'CUSTOMERS_DATA_REQUEST',
+                'address' => 'https://timerapp.online/webhook/customers-data-request'
             ]
             
         

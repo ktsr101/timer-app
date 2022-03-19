@@ -1,3 +1,6 @@
+<?php
+  header("Content-Security-Policy: frame-ancestors https://".auth()->user()->name)
+?>
 
 @extends('shopify-app::layouts.default')
 
