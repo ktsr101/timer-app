@@ -1,3 +1,7 @@
+<?php
+  $domain=$shopDomain ?? Auth::user()->name ;
+  header("Content-Security-Policy: frame-ancestors https://".$domain." "."https://admin.shopify.com");
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
